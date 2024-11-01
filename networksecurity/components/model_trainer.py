@@ -14,6 +14,9 @@ from networksecurity.utils.main_utils.utils import save_object,load_object
 from networksecurity.utils.main_utils.utils import load_numpy_array_data,evaluate_models
 from networksecurity.utils.ml_utils.metric.classification_metric import get_classification_score
 
+
+
+
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import r2_score
 from sklearn.neighbors import KNeighborsClassifier
@@ -25,10 +28,10 @@ from sklearn.ensemble import (
 )
 import mlflow
 from urllib.parse import urlparse
-
+model = AdaBoostClassifier(algorithm="SAMME")
 
 import dagshub
-#dagshub.init(repo_owner='mkirankumar0497', repo_name='networksecurity', mlflow=True)
+dagshub.init(repo_owner='mkirankumar0497', repo_name='networksecurity', mlflow=True)
 os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/mkirankumar0497/networksecurity.mlflow"
 os.environ["MLFLOW_TRACKING_USERNAME"]="mkirankumar0497"
 os.environ["MLFLOW_TRACKING_PASSWORD"]="d38155d66adf461d950163c64fdcd2f369e7198d"
@@ -66,7 +69,7 @@ class ModelTrainer:
                 # There are other ways to use the Model Registry, which depends on the use case,
                 # please refer to the doc for more information:
                 # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-                mlflow.sklearn.log_model(best_model, "model", registered_model_name=best_model)
+                mlflow.sklearn.log_model(best_model, "model", registered_model_name="best_model")
             else:
                 mlflow.sklearn.log_model(best_model, "model")
 

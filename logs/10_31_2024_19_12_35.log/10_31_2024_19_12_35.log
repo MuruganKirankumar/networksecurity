@@ -1,0 +1,7 @@
+[ 2024-10-31 19:12:52,500 ] 1038 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+[ 2024-10-31 19:12:52,647 ] 1038 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+[ 2024-10-31 19:12:52,800 ] 1038 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2024-10-31 19:12:52,806 ] 107 dagshub - INFO - Accessing as mkirankumar0497
+[ 2024-10-31 19:12:53,032 ] 1038 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/mkirankumar0497/networksecurity "HTTP/1.1 200 OK"
+[ 2024-10-31 19:12:53,039 ] 107 dagshub - INFO - Initialized MLflow to track repo "mkirankumar0497/networksecurity"
+[ 2024-10-31 19:12:53,039 ] 107 dagshub - INFO - Repository mkirankumar0497/networksecurity initialized!
